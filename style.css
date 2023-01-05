@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+
+:root{
+    --nav-background: rgb(235, 223, 223);
+    --name-color: rgb(252, 247, 247);
+    --dark-background: rgba(17, 17, 17, 0.8);
+    --link-hover-color: rgb(131, 125, 125);
+    --link-hover-background: #fff;
+    --link-normal-color: rgba(43, 43, 233, 0.8);
+    --paragraph-color: rgba(8, 8, 8, 0.8);
+}
+.name{
+    width: 100%;
+    height: clamp(30px, 10vw, 50px);
+    background: var(--dark-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name h1{
+    color: var(--name-color);
+    font-size: clamp(0.8rem, 5vw, 2rem);
+}
+
+nav{
+    width: 100%;
+    background: var(--nav-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 100%;
+}
+
+.container ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container ul li{
+    padding: clamp(0.3rem, 5vw, 1rem);
+    color: var(--link-normal-color);
+    font-weight: 500;
+}
+
+.container ul li:hover{
+    background: var(--link-hover-background);
+}
+
+.container ul li:hover a{
+    color: var(--link-hover-color);
+}
+
+.container ul li a{
+    text-decoration: none;
+    font-size: clamp(12px, 5vw, 18px);
+}
+
+.body-limit{
+    max-width: 2000px;
+    margin: auto;
+}
+
+.main-container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.banner{
+    background: linear-gradient(68deg, rgba(24, 23, 23, 0.8), rgba(24, 41, 35, 0.4)),
+                url('images/dave-kiss-we-all-alone-in-this-together-cover.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner h1{
+    font-size: clamp(2.2rem, 5vw, 5rem);
+    color: var(--name-color);
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.banner h4{
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    color: rgb(207, 221, 220);
+}
+
+.description{
+    width: 90%;
+    padding: 1rem;
+    max-width: 970px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 2.5rem;
+    background: var(--nav-background);
+}
+
+.description img{
+    width: 400px;
+    height: 400px;
+    margin-right: 2rem;
+    padding: 2rem;
+}
+
+.description p{
+    color: var(--paragraph-color);
+    font-weight: 540;
+    text-align: justify;
+}
+
+.albums{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.albums h1{
+    font-size: 2rem;
+    color: var(--paragraph-color);
+    font-weight: bold;
+}
+
+.album-section{
+    width: 90%;
+    height: fit-content;
+    max-width: 900px;
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--paragraph-color);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.album-section img{
+    width: 250px;
+    height: 250px;
+    padding: 0.5rem;
+    margin-right: 2rem;
+}
+
+i{
+    font-size: 2rem;
+    padding: 1.2rem;
+    color: var(--name-color);
+}
+
+
+@media (max-width: 820px) {
+    .description{
+        flex-direction: column;
+    }
+}
